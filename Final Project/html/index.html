@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEEABIES</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+  
+  <body>
+<!--Navigation Bar/Landing Page-->    
+    <header>
+      <div class="logo"><img src="libraries/logo/logo.png"></a></div>
+      <div class="menu">
+        <a href="#">
+          <ion-icon name="close" class="close"></ion-icon>
+        </a>
+    
+        <ul>
+          <li><a href="#" class="under">HOME</a></li>
+          <li><a href="#" class="under">SHOP</a></li>
+          <li><a href="#" class="under">CONTACT US</a></li>
+          <li><a href="#" class="under">ABOUT US</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <a href="">
+          <input type="text" placeholder="Search products" id="input">  
+          <ion-icon class="s" name="search"></ion-icon>
+        </a>
+      </div>
+      <div class="heading">
+        <ul>
+          <li><a href="#" class="under">HOME</a></li>
+          <li><a href="#section2" class="under">SHOP</a></li> 
+
+          <li><a href="#footer" class="under">CONTACT US</a></li>
+          <li><a href="#footer" class="under">ABOUT US</a></li>
+        </ul>
+      </div>
+      <div class="heading1">
+        <ion-icon name="menu" class="ham"></ion-icon>
+      </div>
+    </header>
+
+    <!--Categories Section-->
+    <div class="categories">
+      <button class="category-btn" data-category="all">ALL</button>
+      <button class="category-btn" data-category="ANIME FIGURINES">ANIME FIGURINES</button>
+      <button class="category-btn" data-category="GUNPLA">GUNPLA</button>
+      <button class="category-btn" data-category="COSPLAY MERCH">COSPLAY MERCH</button>
+    </div>
+
+<!--Image Slider-->    
+<div class="section">
+  <div class="section1">
+    <div class="img-slider">
+      <img src="libraries/products/slides/slide 6.webp" alt="" class="img">
+      <img src="libraries/products/slides/slide 7.jpg" alt="" class="img">
+      <img src="libraries/products/slides/slide 8.jpg" alt="" class="img">
+      <img src="libraries/products/slides/slide 9.jpg" alt="" class="img">
+      <img src="libraries/products/slides/slide 10.png" alt="" class="img">
+    </div>
+
+    
+  
+
+<!--SHOPPING CART-->
+<div id="cart" class="centered">
+  <h2><img src="libraries/logo/outline_shopping_cart_black_36.png" alt="Cart Icon"></h2>
+  <ul id="cart-items"></ul>
+  <p>Total: $<span id="total">0</span></p>
+  <button class="btn btn-primary" onclick="openModal()">Checkout</button>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="modalClose" class="close">&times;</span>
+    <h2>Your Cart</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="modal-cart-items"></tbody>
+    </table>
+    <div id="modal-total" class="total">Total: $0</div>
+    <button onclick="confirmCheckout()">Checkout</button>
+  </div>
+</div>
+
+
+
+
+
+<!--ITEMS/PRODUCTS-->
+<!--the data-category is used to filter products-->
+   
+      </div>
+        <div id="section2" class="section2">
+          <div class="container">
+            <div class="items" data-category="GUNPLA">
+              <div class="img img1"><img src="libraries/products/product 1.webp" alt=""></div>
+              <div class="name">GUNDAM UNICORN</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('GUNDAM UNICORN', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img2"><img src="libraries/products/product 2.webp" alt=""></div>
+              <div class="name">TANYA VON DEGURECHAFF</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('TANYA VON DEGURECHAFF', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img3"><img src="libraries/products/product 3.jpg" alt=""></div>
+              <div class="name">DENNIS</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('DENNIS', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img4"><img src="libraries/products/product 4.jpg" alt=""></div>
+              <div class="name">HOSHIGUMA</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('HOSHIGUMA', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img5"><img src="libraries/products/product 5.jpg" alt=""></div>
+              <div class="name">W, JUST W</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('W, JUST W', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="COSPLAY MERCH">
+              <div class="img img6"><img src="libraries/products/product 6.webp" alt=""></div>
+              <div class="name">GNOME CHOMPSKI</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('GNOME CHOMPSKI', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="COSPLAY MERCH">
+              <div class="img img7"><img src="libraries/products/product 7.jpg" alt=""></div>
+              <div class="name">RICK ASTLEY'S OUTFIT</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('RICK ASTLEY', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img8"><img src="libraries/products/product 8.jpg" alt=""></div>
+              <div class="name">GOJOU SATORU</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('GOJOU SATORU', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="GUNPLA">
+              <div class="img img9"><img src="libraries/products/project 9.jpg" alt=""></div>
+              <div class="name">GUNDAM BARBATOS</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('GUNDAM BARBATOS', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img10"><img src="libraries/products/product 10.jpg" alt=""></div>
+              <div class="name">NIAN AND DUSK</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('NIAN AND DUSK', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img11"><img src="libraries/products/product 11.webp" alt=""></div>
+              <div class="name">MUDROCK</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('MUDROCK', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img12"><img src="libraries/products/product 12.webp" alt=""></div>
+              <div class="name">MEGUMIN</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('MEGUMIN', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img13"><img src="libraries/products/product 13.webp" alt=""></div>
+              <div class="name">JOTARO</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('JOTARO', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img14"><img src="libraries/products/product 14.jpg" alt=""></div>
+              <div class="name">DIO</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('DIO', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="COSPLAY MERCH">
+              <div class="img img15"><img src="libraries/products/product 15.jpg" alt=""></div>
+              <div class="name">GIYUU TOMIOKA'S KATANA</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('GIYUU TOMIOKA KATANA', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img16"><img src="libraries/products/project 16.webp" alt=""></div>
+              <div class="name">POWER</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('POWER', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img17"><img src="libraries/products/product 17.jpg" alt=""></div>
+              <div class="name">KOBENI</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('KOBENI', 69)">ADD TO CART</button>
+            </div>
+            <div class="items" data-category="ANIME FIGURINES">
+              <div class="img img18"><img src="libraries/products/product 18.webp" alt=""></div>
+              <div class="name">POCHITA</div>
+              <div class="price">$69</div>
+              <div class="info">Never gonna give you up, never gonna let you down.</div>
+              <button class="btn btn-primary shop-item-button" type="button" onclick="addToCart('POCHITA', 69)">ADD TO CART</button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </section>
+
+<!--Footer Section-->    
+    <footer>
+      <div id="footer" class="footer0">
+        <h1>WEEABIES</h1>
+      </div>
+      <div class="footer2">
+        <div class="product">
+          <div class="heading">Products</div>
+          <div class="div">Sell your Products</div>
+          <div class="div">Advertise</div>
+          <div class="div">Pricing</div>
+          <div class="div">Product Buisness</div>
+  
+        </div>
+        <div class="services">
+          <div class="heading">Services</div>
+          <div class="div">Return</div>
+          <div class="div">Cash Back</div>
+          <div class="div">Affiliate Marketing</div>
+          <div class="div">Others</div>
+        </div>
+        <div class="Company">
+          <div class="heading">Company</div>
+          <div class="div">Complaint</div>
+          <div class="div">Careers</div>
+          <div class="div">Affiliate Marketing</div>
+          <div class="div">Support</div>
+        </div>
+        <div class="Get Help">
+          <div class="heading">Get Help</div>
+          <div class="div">Help Center</div>
+          <div class="div">Privacy Policy</div>
+          <div class="div">Terms</div>
+          <div class="div">Login</div>
+        </div>
+      </div>
+      <div class="footer3">Copyright © <h4>WEEABIES ONLINE SHOP</h4> 2021-2069</div>
+    </footer>
+
+<!--JavaScript Callout-->    
+
+<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+<script src="javascript/app.js"></script>
+  
+  </body>
+  
+  </html> 
